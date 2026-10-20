@@ -8,9 +8,9 @@
       {%- endif -%}
 
       <div class="influencer-card">
-        {%- if influencer.photo.value != blank -%}
+        {%- if influencer.image.value != blank -%}
           <img
-            src="{{ influencer.photo.value | image_url: width: 400 }}"
+            src="{{ influencer.image.value | image_url: width: 400 }}"
             alt="{{ influencer.name.value | escape }}"
             width="200"
             height="200"
