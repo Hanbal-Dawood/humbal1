@@ -98,7 +98,9 @@
       "type": "hello-world",
       "name": "Hello World",
       "settings": {
-        "title": "Hello World!"
+        "title": "Hello World!",
+        "bg_color": "#EF0000",
+        "title_color": "#FFFFFF"
       }
     }
   },
