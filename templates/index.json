@@ -99,8 +99,65 @@
       "name": "Hello World",
       "settings": {
         "title": "Hello World!",
-        "bg_color": "#EF0000",
-        "title_color": "#FFFFFF"
+        "bg_color": "#E9E9E9",
+        "title_color": "#383434"
+      }
+    },
+    "image_with_text_DHTUXL": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_RnBA46": {
+          "type": "caption",
+          "settings": {
+            "caption": "Influencer",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_cHhrN9": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobjects.influencer.tohi.name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_UNJJ9P": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>{{ metaobjects.influencer.tohi.description | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
+        "button_H7qN6w": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_RnBA46",
+        "heading_cHhrN9",
+        "text_UNJJ9P",
+        "button_H7qN6w"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "{{ metaobjects.influencer.tohi.image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -108,6 +165,7 @@
     "image_banner",
     "featured_collection",
     "hero_banner_QhGeYV",
-    "hello_world_fppKdR"
+    "hello_world_fppKdR",
+    "image_with_text_DHTUXL"
   ]
 }
