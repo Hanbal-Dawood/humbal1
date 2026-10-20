@@ -20,9 +20,9 @@
 
         <div class="influencer-card__content">
           <h3>{{ influencer.name.value }}</h3>
-          {%- if influencer.description.value != blank -%}
-            <div class="influencer-card__description">{{ influencer.description.value }}</div>
-          {%- endif -%}
+          {%- if influencer.description != blank -%}
+        <div class="influencer-card__description rte">{{ influencer.description | metafield_tag }}</div>
+        {%- endif -%}
         </div>
       </div>
     </div>
