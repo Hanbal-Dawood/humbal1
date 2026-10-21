@@ -28,16 +28,14 @@
 
         <div class="influencer-card__content">
           <h3>{{ influencer.name.value }}</h3>
+
           {%- if influencer.description != blank -%}
-        <div class="influencer-card__description rte">{{ influencer.description | metafield_tag }}</div>
-        {%- endif -%}
-        <h3>
-          {%- if template.name == 'product' and influencer.system.url != blank -%}
-            <a href="{{ influencer.system.url }}">{{ influencer.name.value }}</a>
-          {%- else -%}
-            {{ influencer.name.value }}
+            <div class="influencer-card__description rte">{{ influencer.description | metafield_tag }}</div>
           {%- endif -%}
-        </h3>
+
+          {%- if template.name == 'product' and influencer.system.url != blank -%}
+            <a class="influencer-card__link" href="{{ influencer.system.url }}">View profile</a>
+          {%- endif -%}
         </div>
       </div>
     </div>
