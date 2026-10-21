@@ -31,9 +31,13 @@
           {%- if influencer.description != blank -%}
         <div class="influencer-card__description rte">{{ influencer.description | metafield_tag }}</div>
         {%- endif -%}
-        {%- if influencer.system.url != blank -%}
-          <a class="influencer-card__link" href="{{ influencer.system.url }}">View profile</a>
-        {%- endif -%}
+        <h3>
+          {%- if template.name == 'product' and influencer.system.url != blank -%}
+            <a href="{{ influencer.system.url }}">{{ influencer.name.value }}</a>
+          {%- else -%}
+            {{ influencer.name.value }}
+          {%- endif -%}
+        </h3>
         </div>
       </div>
     </div>
@@ -58,7 +62,29 @@
 {% endschema %}
 
 {% stylesheet %}
-.influencer-card { display: flex; gap: 24px; align-items: center; }
-.influencer-card img { border-radius: 50%; object-fit: cover; }
+.influencer-card { 
+  display: flex; gap: 24px; align-items: center;
+ }
+.influencer-card img { 
+  border-radius: 50%; object-fit: cover;
+ }
+ .influencer-card__link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 28px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.influencer-card__link:hover {
+  background: transparent;
+  color: #111;
+}
 @media (max-width: 749px) { .influencer-card { flex-direction: column; text-align: center; } }
 {% endstylesheet %}
