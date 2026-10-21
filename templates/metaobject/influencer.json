@@ -8,6 +8,19 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "influencer_section_bT43yn": {
+      "type": "influencer-section",
+      "name": "Influencer",
+      "settings": {
+        "heading": "Recommended by",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "influencer_section_bT43yn"
+  ]
 }
