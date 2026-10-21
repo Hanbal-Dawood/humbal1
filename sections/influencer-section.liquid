@@ -1,4 +1,9 @@
-{%- assign influencer = product.metafields.custom.influencer.value -%}
+{%- liquid
+  assign influencer = metaobject
+  if influencer == blank
+    assign influencer = product.metafields.custom.influencer.value
+  endif
+-%}
 
 {%- if influencer != blank -%}
   <section class="influencer-section" style="padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; background: {{ section.settings.bg_color }};">
@@ -22,6 +27,9 @@
           <h3>{{ influencer.name.value }}</h3>
           {%- if influencer.description != blank -%}
         <div class="influencer-card__description rte">{{ influencer.description | metafield_tag }}</div>
+        {%- endif -%}
+        {%- if influencer.system.url != blank -%}
+          <a class="influencer-card__link" href="{{ influencer.system.url }}">View profile</a>
         {%- endif -%}
         </div>
       </div>
